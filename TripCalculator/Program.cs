@@ -12,9 +12,8 @@ class Program
     static void Main()
     {
         const int SlicesPerPizza = 8;
-        const double TaxRate = 0.18; // 18 percent
+        const double TaxRate = 0.18; 
 
-        // ===== Part 1: Road Trip =====
         Console.WriteLine("=== Part 1: Road Trip ===");
         Console.Write("Round trip miles: ");
         double miles = double.Parse(Console.ReadLine());
@@ -31,7 +30,6 @@ class Program
         Console.WriteLine("Fuel cost: " + fuelCost.ToString("C"));
         Console.WriteLine();
 
-        // ===== Part 2: Pizza Party =====
         Console.WriteLine("=== Part 2: Pizza Party ===");
         Console.Write("How many people are going: ");
         int people = int.Parse(Console.ReadLine());
@@ -41,7 +39,7 @@ class Program
         double pricePerPizza = double.Parse(Console.ReadLine());
 
         int totalSlices = pizzas * SlicesPerPizza;
-        double slicesPerPerson = (double)totalSlices / people; // cast avoids integer division
+        double slicesPerPerson = (double)totalSlices / people; 
         double pizzaCost = pizzas * pricePerPizza;
 
         Console.WriteLine();
@@ -50,7 +48,6 @@ class Program
         Console.WriteLine("Pizza cost: " + pizzaCost.ToString("C"));
         Console.WriteLine();
 
-        // ===== Part 3: Paycheck =====
         Console.WriteLine("=== Part 3: Paycheck ===");
         Console.Write("Hours worked this week: ");
         double hours = double.Parse(Console.ReadLine());
@@ -67,7 +64,6 @@ class Program
         Console.WriteLine("Take home pay: " + takeHomePay.ToString("C"));
         Console.WriteLine();
 
-        // ===== Part 4: The Whole Trip =====
         Console.WriteLine("=== Part 4: The Whole Trip ===");
         double tripTotal = fuelCost + pizzaCost;
         double costPerPerson = tripTotal / people;
